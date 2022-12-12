@@ -8,9 +8,9 @@ public class PuzzlePieces : MonoBehaviour
     #region variables
     public Vector3 originalPosition;                                           //position to reset to
     private bool wake;
-    [SerializeField]protected GameObject target;                               // target the moving piece goes to
+    [SerializeField] protected GameObject target;                               // target the moving piece goes to
     public NavMeshAgent myAgent;
-    protected PuzzleManager Manager;
+    [SerializeField] protected PuzzleManager Manager;
     #endregion
     public void Start()
     {
