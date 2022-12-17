@@ -24,7 +24,7 @@ public class DetachScrew : MonoBehaviour
         if(detached == false)                                                                                                                            // if the screw has not been detached
         {
             screwPos = screwPos - 0.0001f;              
-            transform.Rotate(0, 1000 * Time.deltaTime, 0, Space.Self);                                                                                  // rotates screw to give off effect of unscrewing
+            transform.Rotate(0, -1000 * Time.deltaTime, 0, Space.Self);                                                                                  // rotates screw to give off effect of unscrewing
             transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, transform.localPosition.z + screwPos);          //moves position of screw outwards
 
             if (screwPos <= finalPos)                                                                                                                   // if the screw has come out far enough
