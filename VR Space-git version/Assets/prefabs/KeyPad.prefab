@@ -490,13 +490,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 999233c9e3fa4c24cb7f41a9786d8409, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  count: 0
-  code1: {fileID: 0}
-  code2: {fileID: 0}
-  code3: {fileID: 0}
-  outerRing: {fileID: 0}
-  middleRing: {fileID: 0}
-  innerRing: {fileID: 0}
+  correctCodeSound: {fileID: 0}
+  incorrectCodeSound: {fileID: 0}
+  ringCodes: []
+  Enter: {fileID: 0}
+  Delete: {fileID: 0}
 --- !u!1 &1202849288789671732
 GameObject:
   m_ObjectHideFlags: 0
@@ -611,8 +609,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b892217cc240b44da162ed17640badf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  display: {fileID: 1065288989310696451}
-  number: 10
+  allocatedNumber: 0
+  controller: {fileID: 0}
 --- !u!54 &3854982552316016434
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -779,8 +777,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b892217cc240b44da162ed17640badf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  display: {fileID: 1065288989310696451}
-  number: 2
+  allocatedNumber: 0
+  controller: {fileID: 0}
 --- !u!54 &8838913918028812840
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -947,8 +945,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b892217cc240b44da162ed17640badf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  display: {fileID: 1065288989310696451}
-  number: 6
+  allocatedNumber: 0
+  controller: {fileID: 0}
 --- !u!54 &8609445790023411211
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1332,8 +1330,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b892217cc240b44da162ed17640badf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  display: {fileID: 1065288989310696451}
-  number: 7
+  allocatedNumber: 0
+  controller: {fileID: 0}
 --- !u!54 &6463657796500552990
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1979,8 +1977,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b892217cc240b44da162ed17640badf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  display: {fileID: 1065288989310696451}
-  number: 3
+  allocatedNumber: 0
+  controller: {fileID: 0}
 --- !u!54 &2086379014518712017
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2491,8 +2489,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b892217cc240b44da162ed17640badf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  display: {fileID: 1065288989310696451}
-  number: 0
+  allocatedNumber: 0
+  controller: {fileID: 0}
 --- !u!54 &8378791317843058299
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2704,8 +2702,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b892217cc240b44da162ed17640badf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  display: {fileID: 1065288989310696451}
-  number: 5
+  allocatedNumber: 0
+  controller: {fileID: 0}
 --- !u!54 &8584219285363303196
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3306,8 +3304,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b892217cc240b44da162ed17640badf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  display: {fileID: 1065288989310696451}
-  number: 9
+  allocatedNumber: 0
+  controller: {fileID: 0}
 --- !u!54 &3576674369735308782
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4051,8 +4049,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b892217cc240b44da162ed17640badf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  display: {fileID: 1065288989310696451}
-  number: 4
+  allocatedNumber: 0
+  controller: {fileID: 0}
 --- !u!54 &6547745011036259524
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4391,8 +4389,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b892217cc240b44da162ed17640badf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  display: {fileID: 1065288989310696451}
-  number: 1
+  allocatedNumber: 0
+  controller: {fileID: 0}
 --- !u!54 &6044862142626488180
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4559,8 +4557,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b892217cc240b44da162ed17640badf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  display: {fileID: 1065288989310696451}
-  number: -1
+  allocatedNumber: 0
+  controller: {fileID: 0}
 --- !u!54 &7064993484259250234
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4997,8 +4995,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b892217cc240b44da162ed17640badf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  display: {fileID: 1065288989310696451}
-  number: 8
+  allocatedNumber: 0
+  controller: {fileID: 0}
 --- !u!54 &4296491227364981755
 Rigidbody:
   m_ObjectHideFlags: 0
